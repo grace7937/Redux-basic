@@ -23,7 +23,8 @@
         }
         var newState;
         if (action.type === "CHANGE_COLOR") {
-          newState = Object.assign({}, state, { color: action.color });       // 기존의 state값을 직접 거드리는것이 아니라 기존의 state값을 이용해 새로운 state를 생성하여 immutable 이 가능하게 해줍니다.
+          newState = Object.assign({}, state, { color: action.color }); 
+          console.log("this is newState", newState);      // 기존의 state값을 직접 거드리는것이 아니라 기존의 state값을 이용해 새로운 state를 생성하여 immutable 이 가능하게 해줍니다.
         }
         console.log(action.type, action, state, newState);
         return newState;                                                      // 새로운 값으로 return 합니다.
